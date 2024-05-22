@@ -14,8 +14,10 @@ templ header(title string) {
 		<script src="static/script/response-targets.js" nonce={ middleware.GetResponseTargetsNonce(ctx) }></script>
 		if os.Getenv("env") == "production" {
 			<link rel="stylesheet" href="static/css/style.min.css" nonce={ middleware.GetTwNonce(ctx) }/>
+			<link rel="stylesheet" href="static/css/global.css" nonce={ middleware.GetTwNonce(ctx) }/>
 		} else {
 			<link rel="stylesheet" href="static/css/style.css" nonce={ middleware.GetTwNonce(ctx) }/>
+			<link rel="stylesheet" href="static/css/global.css" nonce={ middleware.GetTwNonce(ctx) }/>
 		}
 	</head>
 }
